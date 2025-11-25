@@ -22,6 +22,9 @@
             </div>
         </div>
     </div>
+    <div> 
     <a href="{{ route("game.index") }}">Torna ai Giochi</a>
-       <x-modal-delete :game="$game"></x-modal-delete>
+      
+    <x-modal-delete :game="$game"></x-modal-delete>
+    </div>
 </div>
