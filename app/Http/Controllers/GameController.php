@@ -78,8 +78,9 @@ class GameController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Game $game)
     {
-        //
+        $game->delete();
+        return redirect()->route("game.index");
     }
 }
