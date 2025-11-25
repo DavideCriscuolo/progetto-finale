@@ -22,7 +22,7 @@ class GameController extends Controller
      */
     public function create()
     {
-        //
+        return view("games.create");
     }
 
     /**
@@ -30,7 +30,16 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newGame = new Game();
+        $newGame->title = $request["title"];
+        $newGame->editor = $request["editor"];
+        $newGame->classification = $request["classification"];
+        $newGame->plot = $request["plot"];
+        $newGame->price = $request["price"];
+        $newGame->date = $request["date"];
+        $newGame->save();
+
+        return redirect()->route("game.index");
     }
 
     /**
@@ -44,9 +53,9 @@ class GameController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Game $game)
     {
-        //
+        return view("games.edit", compact("game"));
     }
 
     /**
