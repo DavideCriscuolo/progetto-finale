@@ -81,7 +81,7 @@ value="{{ $game->classification }}"
 
 
 
-
-
+<div class="my-2"> <a class="btn btn-primary" href="{{ route("game.index") }}">Torna a tutti i Giochi</a>
+</div>
 </div>
 @endsection
