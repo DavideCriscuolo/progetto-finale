@@ -10,6 +10,7 @@
 
 <div class="col my-2">
 <x-card-index :game="$game"></x-card-index>
+
 </div>
 @endforeach
    </div>

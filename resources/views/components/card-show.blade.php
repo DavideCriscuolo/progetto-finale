@@ -23,6 +23,10 @@
         </div>
     </div>
     <div> 
+            <div class="my-2">
+
+            <span class="badge bg-primary "> {{ $game->category->name }}</span>
+        </div>
     <a href="{{ route("game.index") }}">Torna ai Giochi</a>
       
     <x-modal-delete :game="$game"></x-modal-delete>
