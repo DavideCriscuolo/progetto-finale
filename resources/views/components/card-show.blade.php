@@ -26,6 +26,9 @@
             <div class="my-2">
 
             <span class="badge bg-primary "> {{ $game->category->name }}</span>
+          @foreach ($game->plattforms as $plattform )
+       <span class="badge bg-warning "> {{ $plattform->name }}</span>
+          @endforeach
         </div>
     <a href="{{ route("game.index") }}">Torna ai Giochi</a>
       

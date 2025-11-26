@@ -64,8 +64,17 @@
         @endforeach
 
         
+        
     </select>
 </div>
+@foreach ($plattforms as $plattform )
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" name="plattforms[]" value="{{ $plattform->id }}" id="{{ $plattform->id }}" />
+    <label class="form-check-label" for="{{ $plattform->id }}"> {{ $plattform->name }} </label>
+</div>
+
+
+@endforeach
 
 
 

@@ -51,6 +51,7 @@ class GameController extends Controller
         $newGame->date = $request["date"];
         $newGame->save();
 
+        $newGame->plattforms()->attach($request["plattforms"]);
         return redirect()->route("game.index");
     }
 
