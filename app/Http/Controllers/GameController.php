@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Game;
+use App\Models\Plattform;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -14,6 +16,9 @@ class GameController extends Controller
     {
         $games = Game::all();
 
+
+
+
         return view("games.index", compact("games"));
     }
 
@@ -22,7 +27,13 @@ class GameController extends Controller
      */
     public function create()
     {
-        return view("games.create");
+
+
+        $categories = Category::all();
+
+        //prendiamo tutte le piattaforme per poterle passare alla view index 
+        $plattforms = Plattform::all();
+        return view("games.create", compact("categories", "plattforms"));
     }
 
     /**
@@ -36,6 +47,7 @@ class GameController extends Controller
         $newGame->classification = $request["classification"];
         $newGame->plot = $request["plot"];
         $newGame->price = $request["price"];
+        $newGame->category_id = $request["category_id"];
         $newGame->date = $request["date"];
         $newGame->save();
 

@@ -50,6 +50,27 @@
               placeholder=""
           />
       </div>
+
+      
+      <div class="mb-3">
+          <label for="category_id" class="form-label">Categoria</label>
+          <select
+          class="form-select form-select-lg"
+          name="category_id"
+          id="category_id"
+          >
+          @foreach ($categories as $category )
+        <option value="{{ $category->id }}">{{ $category->name }}</option>
+        @endforeach
+
+        
+    </select>
+</div>
+
+
+
+
+
       <div class="mb-3">
         <label for="plot" class="form-label">Trama</label>
         <textarea class="form-control" name="plot" id="plot" rows="3"></textarea>
@@ -66,6 +87,10 @@
             placeholder=""
         />
       </div>
+      
+
+
+
       
       <button type="submit" class="btn btn-success">Inserisci</button>
   </form>
