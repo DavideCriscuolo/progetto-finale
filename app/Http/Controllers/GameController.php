@@ -51,7 +51,12 @@ class GameController extends Controller
         $newGame->date = $request["date"];
         $newGame->save();
 
-        $newGame->plattforms()->attach($request["plattforms"]);
+        if ($request->has("plattforms")) {
+
+            $newGame->plattforms()->attach($request["plattforms"]);
+        }
+
+
         return redirect()->route("game.index");
     }
 
@@ -90,8 +95,14 @@ class GameController extends Controller
         $game->category_id = $request["category_id"];
         $game->date = $request["date"];
         $game->update();
+        if ($request->has("plattforms")) {
 
-        $game->plattforms()->attach($request["plattforms"]);
+            $game->plattforms()->sync($request["plattforms"]);
+        } else {
+
+            $game->plattforms()->detach();
+        }
+
         return redirect()->route("game.index");
     }
 
