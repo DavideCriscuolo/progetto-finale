@@ -75,8 +75,29 @@ value="{{ $game->classification }}"
             placeholder=""
         />
       </div>
-      
+            <div class="mb-3">
+          <label for="category_id" class="form-label">Categoria</label>
+          <select
+          class="form-select form-select-lg"
+          name="category_id"
+          id="category_id"
+          >
+          @foreach ($categories as $category )
+        <option value="{{ $category->id }}">{{ $category->name }}</option>
+        @endforeach
+
+        
+        
+    </select>
+</div>
+@foreach ($plattforms as $plattform )
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" name="plattforms[]" value="{{ $plattform->id }}" id="{{ $plattform->id }}" {{ $game->plattforms->contains($plattform->id) ? "checked" :"" }} />
+    <label class="form-check-label" for="{{ $plattform->id }}"> {{ $plattform->name }} </label>
+</div>
+@endforeach
       <button type="submit" class="btn btn-success">Modifica</button>
+    
   </form>
 
 

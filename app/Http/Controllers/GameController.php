@@ -68,7 +68,12 @@ class GameController extends Controller
      */
     public function edit(Game $game)
     {
-        return view("games.edit", compact("game"));
+
+        $categories = Category::all();
+
+        //prendiamo tutte le piattaforme per poterle passare alla view index 
+        $plattforms = Plattform::all();
+        return view("games.edit", compact("game", "categories", "plattforms"));
     }
 
     /**
@@ -82,9 +87,11 @@ class GameController extends Controller
         $game->classification = $request["classification"];
         $game->plot = $request["plot"];
         $game->price = $request["price"];
+        $game->category_id = $request["category_id"];
         $game->date = $request["date"];
         $game->update();
 
+        $game->plattforms()->attach($request["plattforms"]);
         return redirect()->route("game.index");
     }
 
