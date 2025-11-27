@@ -32,6 +32,9 @@
         </div>
     <a href="{{ route("game.index") }}">Torna ai Giochi</a>
       
-    <x-modal-delete :game="$game"></x-modal-delete>
+    <x-modal-delete>
+        <x-slot:id>{{ $game->id }}</x-slot:id>
+            <x-slot:title>{{ $game->title }}</x-slot:title>
+    </x-modal-delete>
     </div>
 </div>

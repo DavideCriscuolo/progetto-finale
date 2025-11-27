@@ -11,8 +11,18 @@
    <ul class="list-group">
 @foreach ($categories as $category )
 
-<li class="list-group-item d-flex justify-content-between">{{ $category->name }} <a class="btn btn-warning" href="{{ route("category.edit", $category->id) }}">Modifica</a></li>
+<li class="list-group-item d-flex justify-content-between ">{{ $category->name }}
+   
+   
+   <div><a class="btn btn-warning" href="{{ route("category.edit", $category->id) }}">Modifica</a>   </div>
 
+
+      <x-modal-delete>
+           <x-slot:id>{{ $category->id }}</x-slot:id>
+               <x-slot:title> la categoria {{ $category->name }}</x-slot:title>
+       </x-modal-delete>
+ 
+</li>
 @endforeach
 </ul>
    </div>
