@@ -111,7 +111,7 @@ class GameController extends Controller
      */
     public function destroy(Game $game)
     {
-        $game->delete();
+        $game->deleteOrFail();
         return redirect()->route("game.index");
     }
 }
