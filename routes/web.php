@@ -1,5 +1,7 @@
 <?php
 
+
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\ProfileController;
@@ -23,5 +25,6 @@ Route::middleware('auth')->group(function () {
 Route::get("/dashboard", [DashboardController::class, "getUser"])->middleware(["auth", "verified"])->name("dashboard");
 
 Route::resource("game", GameController::class)->middleware(["auth", "verified"]);
+Route::resource("category", CategoryController::class)->middleware(["auth", "verified"]);
 
 require __DIR__ . '/auth.php';
