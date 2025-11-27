@@ -8,6 +8,9 @@
       <div class="my-3">
       <a class="btn btn-primary" href="{{ route("category.index") }}">Vai alle categorie</a>
    </div>
+         <div class="my-3">
+      <a class="btn btn-primary" href="{{ route("plattform.index") }}">Vai alle Piattaforme</a>
+   </div>
    <div class="row row-cols-3">
 @foreach ($games as $game )
 
