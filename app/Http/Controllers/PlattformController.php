@@ -47,24 +47,27 @@ class PlattformController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Plattform $plattform)
     {
-        //
+        return view("plattforms.edit", compact("plattform"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Plattform $plattform)
     {
-        //
+        $plattform->name = $request["name"];
+        $plattform->update();
+        return redirect()->route("plattform.index");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Plattform $plattform)
     {
-        //
+        $plattform->delete();
+        return redirect()->route("plattform.index");
     }
 }

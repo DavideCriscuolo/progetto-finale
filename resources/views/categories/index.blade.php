@@ -20,6 +20,7 @@
       <x-modal-delete>
            <x-slot:id>{{ $category->id }}</x-slot:id>
                <x-slot:title> la categoria {{ $category->name }}</x-slot:title>
+                  <x-slot:route>{{ route("category.destroy",$plattform->id)}}</x-slot:route>
        </x-modal-delete>
  
 </li>

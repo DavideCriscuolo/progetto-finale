@@ -35,6 +35,7 @@
     <x-modal-delete>
         <x-slot:id>{{ $game->id }}</x-slot:id>
             <x-slot:title>{{ $game->title }}</x-slot:title>
+               <x-slot:route>{{ route("game.destroy",$game->id)}}</x-slot:route>
     </x-modal-delete>
     </div>
 </div>
