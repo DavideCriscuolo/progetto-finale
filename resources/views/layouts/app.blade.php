@@ -86,13 +86,13 @@
         </nav>
 
         <main class="">
-            <div class="container">
+            <div class="container-fluid">
 
-                <div class="row">
-                       <div class="col col-3">
-                        <x-sidebar></x-sidebar>
-                    </div>
-                    <div class="col col-9">
+          
+         
+                 
+               
+                    <div >
     
                         @yield('content')
                     </div>

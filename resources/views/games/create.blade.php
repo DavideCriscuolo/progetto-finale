@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="">
+
+<div class="row">
+    <div class="col col-3 ">
+        <x-sidebar></x-sidebar>
+    </div>
+    <div class="col col-9">
+        <div class="">
   <form action="{{ route("game.store") }}" method="POST">
 @csrf
 
@@ -109,4 +115,9 @@
 
 
 </div>
+    </div>
+</div>
+
+
+
 @endsection

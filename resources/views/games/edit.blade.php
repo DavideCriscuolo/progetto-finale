@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="my-4">
+
+
+
+<div class="row">
+    <div class="col col-3 ">
+        <x-sidebar></x-sidebar>
+    </div>
+    <div class="col col-9">
+        <div class="my-4">
   <form action="{{ route("game.update",$game->id) }}" method="POST">
 @csrf
 @method("PUT")
@@ -105,4 +113,9 @@ value="{{ $game->classification }}"
 <div class="my-2"> <a class="btn btn-primary" href="{{ route("game.index") }}">Torna a tutti i Giochi</a>
 </div>
 </div>
+    </div>
+</div>
+
+
+
 @endsection

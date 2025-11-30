@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class=" my-5">
+
+<div class="row">
+    <div class="col col-3">
+        <x-sidebar></x-sidebar>
+    </div>
+    <div class="col col-9 "><div class=" my-5">
     <div><h1>Inserisci una nuova Piattaforma</h1></div>
 
 
@@ -26,5 +31,7 @@
         </form>
     </div>
     <div class=""><a class="btn btn-primary" href="{{ route("plattform.index") }}">Torna alle Piattaforme</a> </div>  
+</div></div>
 </div>
+
 @endsection

@@ -1,20 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="">
+<div class="row">
+
+  <div class="col col-3 border-end">
+    <x-sidebar></x-sidebar>
+  </div>
 
 
+   <div class="col col-9">
+     <div class="row row-cols-3">
+     @foreach ($games as $game )
+     
+     <div class="col my-2">
+     <x-card-index :game="$game"></x-card-index>
+     
+     </div>
+     @endforeach
+      </div>
 
-   
-   <div class="row row-cols-3">
-   @foreach ($games as $game )
-   
-   <div class="col my-2">
-   <x-card-index :game="$game"></x-card-index>
-   
    </div>
-   @endforeach
-    </div>
 
 
 
