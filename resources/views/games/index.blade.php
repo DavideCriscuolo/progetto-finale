@@ -9,6 +9,7 @@
 
 
    <div class="col col-9">
+    <div class="text-center my-2"><h1>Tutti i Giochi</h1></div>
      <div class="row row-cols-3">
      @foreach ($games as $game )
      
