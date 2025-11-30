@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container my-5">
+<div class="my-5">
     <div><h1>Modifica la piattaforma {{ $plattform->name }}</h1></div>
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="my-4">
   <form action="{{ route("game.update",$game->id) }}" method="POST">
 @csrf
 @method("PUT")

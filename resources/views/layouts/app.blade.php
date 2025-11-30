@@ -86,7 +86,19 @@
         </nav>
 
         <main class="">
-            @yield('content')
+            <div class="container">
+
+                <div class="row">
+                       <div class="col col-3">
+                        <x-sidebar></x-sidebar>
+                    </div>
+                    <div class="col col-9">
+    
+                        @yield('content')
+                    </div>
+                 
+                </div>
+            </div>
         </main>
     </div>
 

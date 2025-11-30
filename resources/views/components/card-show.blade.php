@@ -30,7 +30,7 @@
        <span class="badge bg-warning "> {{ $plattform->name }}</span>
           @endforeach
         </div>
-    <a href="{{ route("game.index") }}">Torna ai Giochi</a>
+  <div><a class="btn btn-primary" href="{{ route("game.index") }}">Torna ai Giochi</a> </div>  
       
     <x-modal-delete>
         <x-slot:id>{{ $game->id }}</x-slot:id>

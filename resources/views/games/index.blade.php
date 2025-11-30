@@ -1,20 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-
-<div class="row " >
-   <div class="col col-3 my-3 ">
-
-<x-sidebar></x-sidebar>
+<div class="">
 
 
 
-
-
- 
-   </div>
-   <div class="col col-9">
+   
    <div class="row row-cols-3">
    @foreach ($games as $game )
    
@@ -24,8 +15,8 @@
    </div>
    @endforeach
     </div>
-   </div>
-</div>
+
+
 
   </div>
  

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container my-5">
+<div class=" my-5">
     <div><h1>Crea una nuova categoria</h1></div>
 
 
@@ -25,5 +25,6 @@
     <button class="btn btn-success" type="submit">Crea</button>
         </form>
     </div>
+    <div class=""><a class="btn btn-primary" href="{{ route("category.index") }}">Torna alle categorie</a> </div>  
 </div>
 @endsection

@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
 
-<div class="row">
-   <div class="col col-3 my-3 ">
-      <x-sidebar></x-sidebar>
-   </div>
-   <div class="col col-9 ">
+
+<div>
+ 
+<div>
 
    <div>
       <h1 class="my-2 text-center">Tutte le categorie</h1>
@@ -41,6 +39,6 @@
 
 
 
-   </div>
-</div>
+  
+
 @endsection

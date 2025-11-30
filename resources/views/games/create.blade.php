@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="">
   <form action="{{ route("game.store") }}" method="POST">
 @csrf
 
@@ -104,7 +104,7 @@
       <button type="submit" class="btn btn-success">Inserisci</button>
   </form>
 
-
+<div class="my-2"><a class="btn btn-primary" href="{{ route("game.index") }}">Torna ai Giochi</a> </div>  
 
 
 
