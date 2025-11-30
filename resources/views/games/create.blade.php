@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="row">
+    <div class="text-center">
+        <h1>Inserisci un nuovo gioco</h1>
+    </div>
     <div class="col col-3 ">
         <x-sidebar></x-sidebar>
     </div>

@@ -12,6 +12,10 @@ class Game extends Model
     {
         return $this->belongsTo(Category::class);
     }
+    public function medias()
+    {
+        return $this->hasMany(Media::class);
+    }
 
 
     //per relazione molti a molti
