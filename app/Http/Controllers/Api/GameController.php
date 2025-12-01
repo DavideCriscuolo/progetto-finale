@@ -22,4 +22,18 @@ class GameController extends Controller
             ]
         );
     }
+    public function show(Game $game)
+    {
+
+        // with per ottenre tutte le relazioni
+        $game->load("category", "plattforms", "medias");
+
+        return response()->json(
+            [
+                "Sucess" => true,
+
+                "data" => $game
+            ]
+        );
+    }
 }
