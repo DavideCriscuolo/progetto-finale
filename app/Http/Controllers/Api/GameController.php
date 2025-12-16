@@ -25,7 +25,6 @@ class GameController extends Controller
     public function show(Game $game)
     {
 
-        // with per ottenre tutte le relazioni
         $game->load("category", "plattforms", "medias");
 
         return response()->json(
@@ -35,5 +34,16 @@ class GameController extends Controller
                 "data" => $game
             ]
         );
+    }
+    public function bestBuy()
+    {
+        $games = Game::with('category', 'plattforms', 'medias')
+            ->where('price', '<', 20)
+            ->get();
+
+        return response()->json([
+            'Success' => true,
+            'data' => $games
+        ]);
     }
 }
