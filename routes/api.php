@@ -12,3 +12,4 @@ use Illuminate\Support\Facades\Route;
 Route::get("/games", [GameController::class, "index"]);
 Route::get("/game/{game}", [GameController::class, "show"]);
 Route::get("/games/best-buy", [GameController::class, "bestBuy"]);
+Route::get('games/{game}/related', [GameController::class, 'related']);

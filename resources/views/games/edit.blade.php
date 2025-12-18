@@ -65,7 +65,7 @@ value="{{ $game->classification }}"
       <div class="mb-3">
         
         <label for="plot" class="form-label">Trama</label>
-        <textarea class="form-control" name="plot" id="plot" rows="3" placeholder="{{ $game->plot }}"         ></textarea>
+        <textarea class="form-control" name="plot" id="plot" rows="3"      >{{ $game->plot }}</textarea>
       </div>
       
       <div class="mb-3">

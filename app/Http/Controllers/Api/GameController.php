@@ -46,4 +46,17 @@ class GameController extends Controller
             'data' => $games
         ]);
     }
+
+    public function related(Game $game)
+    {
+        $related = Game::with('category', 'plattforms', 'medias')
+            ->where('category_id', $game->category_id)
+            ->where('id', '!=', $game->id)
+            ->get();
+
+        return response()->json([
+            'Success' => true,
+            'data' => $related
+        ]);
+    }
 }
